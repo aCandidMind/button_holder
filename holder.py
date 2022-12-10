@@ -4,10 +4,11 @@ import time
 
 BUTTONS = ['left', 'right']  # valid button names
 START_DELAY = 3
+KEY = 'Scroll_Lock'
 
 
 def main():
-	button = input('Enter right or left: ')
+	button = 'left'# input('Enter right or left: ')
 
 	if button in BUTTONS:
 		print('Will start in:')
@@ -16,8 +17,8 @@ def main():
 			time.sleep(1)
 		mouse.press(button=button)  # hold the button
 
-		print('Waiting for escape key in order to stop...')
-		keyboard.wait('esc')  # wait for escape key to be pressed
+		print('Waiting for %s key in order to stop...' % KEY)
+		keyboard.wait(KEY)  # wait for key to be pressed
 		mouse.release(button=button)  # stop holding
 		print('Done!')
 	else:
