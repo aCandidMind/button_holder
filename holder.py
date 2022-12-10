@@ -3,7 +3,7 @@ import keyboard
 import time
 
 BUTTONS = ['left', 'right']  # valid button names
-START_DELAY = 5
+START_DELAY = 3
 
 
 def main():
